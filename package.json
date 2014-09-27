@@ -1,0 +1,33 @@
+{
+  "name": "RC-Sumobot",
+  "version": "1.0.0",
+  "description": "Control a Sumobot over Websockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frijol/RC-Sumobot.git"
+  },
+  "hardware": {},
+  "keywords": [
+    "sumobot",
+    "nodebots",
+    "tessel",
+    "rc",
+    "remote",
+    "websockets",
+    "robots"
+  ],
+  "author": "Kelsey Breseman",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Frijol/RC-Sumobot/issues"
+  },
+  "homepage": "https://github.com/Frijol/RC-Sumobot",
+  "dependencies": {
+    "nodejs-websocket": "^1.0.0",
+    "servo-pca9685": "^0.1.3"
+  }
+}
