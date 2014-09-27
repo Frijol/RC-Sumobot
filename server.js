@@ -8,24 +8,24 @@ var port = 8000;
 
 // Create the websocket server, provide connection callback
 var server = ws.createServer(function (conn) {
-  console.log('Connected to bot...');
+  console.log('Connected to bot!');
   tessel.led[1].output(1);
   // If get a binary stream is opened up
   conn.on('binary', function(stream) {
     // When we get data
     stream.on('data', function(data) {
       // Clean up the data
-      var input = data.toString()
+      var input = data.toString().toLowerCase();
       // Log the data
       console.log(input);
       // Parse the data
-      if(input == 'forward\n' || input == 'f\n') {
+      if(input == 'forward\n' || input == 'w\n') {
         forward();
-      } else if (input == 'back\n' || input == 'b\n') {
+      } else if (input == 'back\n' || input == 's\n') {
         back();
-      } else if (input == 'right\n' || input == 'r\n') {
+      } else if (input == 'right\n' || input == 'd\n') {
         right();
-      } else if (input == 'left\n' || input == 'l\n') {
+      } else if (input == 'left\n' || input == 'a\n') {
         left();
       } else {
         stop();

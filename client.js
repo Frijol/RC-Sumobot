@@ -9,7 +9,7 @@ ws.setBinaryFragmentation(1);
 
 // When we get a connection
 var connection = ws.connect('ws://' + ipAddress + ':' + port, function() {
-  console.log('Connected to server! You may start typing  into the console.');
+  console.log('Connected to bot! Control by entering WASD controls. Press any other key to stop.');
   // Pipe the data to our server
   process.stdin.on('data', function(data) {
     // Send data
