@@ -1,3 +1,6 @@
+// Connect Tessel to wifi, then tessel run this file
+// TODO: build in the wifi connection
+
 var ws = require('nodejs-websocket');
 
 var tessel = require('tessel');
