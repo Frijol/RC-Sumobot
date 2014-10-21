@@ -1,4 +1,4 @@
-RC-Sumobot
+Tesselbot
 ==========
 
 Control a Sumobot remotely over Websockets.
