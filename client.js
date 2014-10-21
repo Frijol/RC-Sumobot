@@ -2,7 +2,6 @@
 var ipAddress = '192.168.128.62';
 
 // Run this file with node once your server is running on Tessel
-
 var ws = require('nodejs-websocket');
 var port = 8000;
 

@@ -13,7 +13,7 @@ See it work [on Vine!](https://vine.co/v/ObTV02AZYh5)
 * [Tessel](//tessel.io)
 * [Servo Module](tessel.io/modules#module-servo)
 * Two continuous rotation servos
-* A battery (5V/1A)â most convenient if USB (I use [this one](http://www.amazon.com/Ultra-Compact-Portable-Lipstick-Sized-Technology-Smartphones/dp/B00M0OTTG0/ref=sr_1_4?ie=UTF8&qid=1413851941&sr=8-4&keywords=battery+anker))
+* A battery (5V/1A)– most convenient if USB (I use [this one](http://www.amazon.com/Ultra-Compact-Portable-Lipstick-Sized-Technology-Smartphones/dp/B00M0OTTG0/ref=sr_1_4?ie=UTF8&qid=1413851941&sr=8-4&keywords=battery+anker))
 * Two male to female wires for powering the servo module from Tessel's Vin and Ground
 * A 10-pin cable/ten male to female wires for extending the module (optional)
 
@@ -30,17 +30,11 @@ See it work [on Vine!](https://vine.co/v/ObTV02AZYh5)
 3. Drill some holes in the bottom of the projects box and attach it to the top of the sumobot with screws.
 4. Your Tessel, etc. go in the box; your servo cables thread through the hole in the end of the box to get to the servo module.
 
-![image](https://s3.amazonaws.com/tessel-portal/uploads/original-11-1413855485425-main.jpg)
-
 ## Electrical Assembly
 0. Unplug power while you're messing with wires. Power always gets plugged in last.
-1. Plug your servo module in to Port A on your Tessel. I used extension cables so that I could fit everything into my box better, so mine looks like this:
-    ![image](https://s3.amazonaws.com/tessel-portal/uploads/original-11-1413855600111-cable.jpg)
+1. Plug your servo module in to Port A on your Tessel. I used extension cables so that I could fit everything into my box better.
 2. Plug in your two continuous rotation servos to positions 1 and 2 on your servo module. Remember, the black wire goes to Ground/`-`.
 3. This is a little bit hack-y, but we'll get away with it in this application. Since you're powering Tessel from a 5V source (USB from your computer/the specified battery), Vin on the GPIO bank is 5V. Run a red wire from Vin to any of the `+` positions on your servo module (yes, the same kind of pins you plugged the servos into). Also run a wire from GPIO GND to servo module `-`. This means we don't have to plug in the servo module to an external power source like we usually do.
-   Like this:
-   ![image](https://s3.amazonaws.com/tessel-portal/uploads/original-11-1413855511231-wires.jpg)
-
 4. Power your Tessel. For now, just plug it in to your computer; after you make sure the code is working, you'll plug it in to your battery.
 
 ## Code Setup
@@ -70,11 +64,8 @@ Great! If things were working well in testing, we can deploy and run the Tesselb
 
 1. With Tessel plugged in to your computer, run `tessel push server.js`. This deploys the server code to Tessel, so it will run automatically when Tessel is powered.
 2. Unplug Tessel from your computer and plug it in to battery power.
-    ![image](https://s3.amazonaws.com/tessel-portal/uploads/original-11-1413855573194-power.jpg)
 3. Watch Tessel's bootup: blinking yellow while connecting, yellow for connected, blue for server running, blinking green when it's waiting for you to connect. (If it's not doing these things, cycle power and see if it works the next time.)
 4. From your computer, again run `node client.js` to connect to the Tesselbot. It should acknowledge connection with a green light and in your console.
 5. Play with the Tesselbot!
-
-![image](https://s3.amazonaws.com/tessel-portal/uploads/original-11-1413856171590-alt-main.jpg)
 
 If you need to change your server code and re-deploy, you can run `tessel erase` to erase the code on Tessel.
