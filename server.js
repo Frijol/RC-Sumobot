@@ -97,14 +97,14 @@ function back() {
 
 function right() {
   console.log('Moving: right');
-  servo.move(1, 1);
-  servo.move(2, 1);
+  servo.move(1, 0);
+  servo.move(2, 0);
 }
 
 function left() {
   console.log('Moving: left');
-  servo.move(1, 0);
-  servo.move(2, 0);
+  servo.move(1, 1);
+  servo.move(2, 1);
 }
 
 function stop() {
